@@ -1,9 +1,9 @@
-export interface Users {
+export interface User {
     id: number;
     name: string;
     username: string;
     email: string;
-    adress: {
+    address: {
         street: string;
         suite: string;
         city: string;

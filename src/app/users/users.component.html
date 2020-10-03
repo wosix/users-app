@@ -1,1 +1,47 @@
-<p>users works!</p>
+<div *ngFor="let user of users">
+    <div
+        style="display: flex;flex-direction: row;flex-wrap: wrap;border: 2px solid rgba(146, 197, 64, 0.801);padding: 0px; margin: 8px;background-color: rgba(146, 197, 64, 0.151);margin-bottom: 38px;">
+        <!-- 1 -->
+        <strong style="margin-left: 4px;">Id: {{ user.id }}</strong>
+        <div style="width: 24%;border-right: 2px dashed  rgba(146, 197, 64, 0.247);"><br> <b>{{ user.name }}</b>
+            <br> username: {{ user.username }}
+            <br> email: <b>{{ user.email }}</b>
+            <br> website: {{ user.website }}
+            <br> phone: {{ user.phone }}
+        </div>
+        <!-- 2 -->
+        <strong style="margin-left: 4px;">Adress</strong>
+        <div style="width: 250px;border-right: 2px dashed  rgba(146, 197, 64, 0.247);">
+            <br>st: {{ user.address.street }}
+            <br>suite: {{ user.address.suite }}
+            <br>city: <b>{{ user.address.city }}</b>
+            <br>zipcode: {{ user.address.zipcode }}
+        </div>
+        <!-- 3 -->
+        <strong style="margin-left: 4px;">Company</strong>
+        <div>
+            <br>name: <b>{{ user.company.name }}</b>
+            <br>phraze: {{ user.company.catchPhrase }}
+            <br>bs: {{ user.company.bs}}
+        </div>
+        <!-- 
+        adress: {
+            street: string;
+            suite: string;
+            city: string;
+            zipcode: string;
+            geo: {
+                lat: number;
+                lng: number;
+            }
+        }
+        phone: string;
+        website: string;
+        company: {
+            name: string;
+            catchPhrase: string;
+            bs: string;
+        } -->
+    </div>
+
+</div>
